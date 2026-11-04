@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:diamond",
+    "S": "buffs_potions:creeper_upgrade",
+    "C": "minecraft:tnt"
+  },
+  "result": {
+    "id": "buffs_potions:creeper_upgrade",
+    "count": 2
+  }
+}

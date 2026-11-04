@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CE ",
+    "C  ",
+    "CS "
+  ],
+  "key": {
+    "C": "minecraft:cobblestone",
+    "E": "minecraft:end_rod",
+    "S": "minecraft:shulker_shell"
+  },
+  "result": {
+    "id": "buffs_potions:brewing_stack",
+    "count": 1
+  }
+}

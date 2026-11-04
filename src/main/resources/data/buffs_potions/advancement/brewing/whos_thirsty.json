@@ -1,0 +1,33 @@
+{
+  "parent": "buffs_potions:brewing/root",
+  "criteria": {
+    "held": {
+      "trigger": "buffs_potions:flagon_held_drink"
+    },
+    "placed": {
+      "trigger": "buffs_potions:flagon_placed_drink"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.whos_thirsty.description"
+    },
+    "icon": {
+      "components": {
+        "minecraft:item_model": "buffs_potions:water_flagon"
+      },
+      "id": "buffs_potions:flagon"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.whos_thirsty.title"
+    }
+  },
+  "requirements": [
+    [
+      "held"
+    ],
+    [
+      "placed"
+    ]
+  ]
+}

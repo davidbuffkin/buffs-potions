@@ -1,0 +1,24 @@
+{
+  "parent": "buffs_potions:brewing/touch_faith",
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "stacked": {
+      "trigger": "buffs_potions:stacks_on_stacks"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.stacks_on_stacks.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "id": "minecraft:bricks"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.stacks_on_stacks.title"
+    }
+  }
+}

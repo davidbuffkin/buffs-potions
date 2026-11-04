@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OAO",
+    "GEG",
+    "OGO"
+  ],
+  "key": {
+    "O": "minecraft:obsidian",
+    "A": "minecraft:gold_ingot",
+    "G": "minecraft:glass",
+    "E": "minecraft:ender_eye"
+  },
+  "result": {
+    "id": "buffs_potions:ender_flagon",
+    "count": 1
+  }
+}

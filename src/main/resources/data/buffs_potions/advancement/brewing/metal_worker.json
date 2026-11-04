@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/double_time",
+  "criteria": {
+    "golem": {
+      "trigger": "buffs_potions:bellows_golem"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.metal_worker.description"
+    },
+    "icon": {
+      "id": "minecraft:copper_golem_statue"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.metal_worker.title"
+    }
+  }
+}

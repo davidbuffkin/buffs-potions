@@ -1,0 +1,28 @@
+{
+  "parent": "buffs_potions:brewing/thought_flagon",
+  "rewards": {
+    "experience": 250
+  },
+  "criteria": {
+    "tipped": {
+      "trigger": "buffs_potions:tip_jar"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.tip_jar.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:healing"
+        }
+      },
+      "id": "minecraft:tipped_arrow"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.tip_jar.title"
+    }
+  }
+}

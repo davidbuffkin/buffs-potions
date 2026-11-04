@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "enum": "net/minecraft/world/inventory/RecipeBookType",
+      "name": "BUFFS_POTIONS_BREWING_STILL",
+      "constructor": "()V",
+      "parameters": []
+    },
+    {
+      "enum": "net/minecraft/world/inventory/RecipeBookType",
+      "name": "BUFFS_POTIONS_BREWING_STAND",
+      "constructor": "()V",
+      "parameters": []
+    },
+    {
+      "enum": "net/minecraft/world/inventory/RecipeBookType",
+      "name": "BUFFS_POTIONS_BREWING_STACK",
+      "constructor": "()V",
+      "parameters": []
+    }
+  ]
+}

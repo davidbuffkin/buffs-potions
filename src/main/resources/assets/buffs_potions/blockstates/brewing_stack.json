@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "buffs_potions:block/brewing_stack", "y": 180 },
+    "facing=east": { "model": "buffs_potions:block/brewing_stack", "y": 270 },
+    "facing=south": { "model": "buffs_potions:block/brewing_stack" },
+    "facing=west": { "model": "buffs_potions:block/brewing_stack", "y": 90 }
+  }
+}

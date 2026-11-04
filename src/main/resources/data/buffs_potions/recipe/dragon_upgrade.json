@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "#S#",
+    "#C#",
+    "###"
+  ],
+  "key": {
+    "#": "minecraft:diamond",
+    "S": "buffs_potions:dragon_upgrade",
+    "C": "minecraft:sculk"
+  },
+  "result": {
+    "id": "buffs_potions:dragon_upgrade",
+    "count": 2
+  }
+}

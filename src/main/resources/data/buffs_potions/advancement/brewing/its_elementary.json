@@ -1,0 +1,24 @@
+{
+  "parent": "buffs_potions:brewing/still_waters",
+  "criteria": {
+    "mundane": {
+      "trigger": "buffs_potions:mundane_still"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.its_elementary.description"
+    },
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:healing"
+        }
+      },
+      "id": "minecraft:potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.its_elementary.title"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/stay_standing",
+  "criteria": {
+    "brewed": {
+      "trigger": "buffs_potions:latent_stand"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.see_some_id.description"
+    },
+    "icon": {
+      "id": "minecraft:ender_eye"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.see_some_id.title"
+    }
+  }
+}

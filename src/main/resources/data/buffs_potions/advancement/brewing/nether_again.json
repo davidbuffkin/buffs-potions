@@ -1,0 +1,28 @@
+{
+  "parent": "buffs_potions:brewing/protracted",
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "drunk": {
+      "trigger": "buffs_potions:nether_again"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.nether_again.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:fire_resistance"
+        }
+      },
+      "id": "minecraft:potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.nether_again.title"
+    }
+  }
+}

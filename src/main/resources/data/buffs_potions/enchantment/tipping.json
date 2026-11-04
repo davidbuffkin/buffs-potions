@@ -1,0 +1,21 @@
+{
+  "description": {
+    "translate": "enchantment.buffs_potions.tipping"
+  },
+  "supported_items": "#buffs_potions:enchantable/lingering_flagon_belt",
+  "primary_items": "#buffs_potions:enchantable/lingering_flagon_belt",
+  "weight": 5,
+  "max_level": 1,
+  "min_cost": {
+    "base": 12,
+    "per_level_above_first": 0
+  },
+  "max_cost": {
+    "base": 50,
+    "per_level_above_first": 0
+  },
+  "anvil_cost": 2,
+  "slots": [
+    "any"
+  ]
+}

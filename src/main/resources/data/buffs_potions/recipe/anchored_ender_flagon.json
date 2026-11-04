@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "OAO",
+    "GEG",
+    "OGO"
+  ],
+  "key": {
+    "O": "minecraft:crying_obsidian",
+    "A": "minecraft:prismarine_crystals",
+    "G": "minecraft:glass",
+    "E": "minecraft:ender_eye"
+  },
+  "result": {
+    "id": "buffs_potions:anchored_ender_flagon",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "buffs_potions:item/flagon_fluid_3",
+    "layer1": "buffs_potions:item/flagon"
+  }
+}

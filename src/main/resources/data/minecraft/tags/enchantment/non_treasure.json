@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "buffs_potions:protraction",
+    "buffs_potions:amplification",
+    "buffs_potions:quick_quaff",
+    "buffs_potions:tipping"
+  ]
+}

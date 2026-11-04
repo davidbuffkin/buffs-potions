@@ -1,0 +1,25 @@
+{
+  "parent": "buffs_potions:brewing/whos_thirsty",
+  "rewards": {
+    "experience": 30
+  },
+  "criteria": {
+    "crafted": {
+      "conditions": {
+        "recipe_id": "buffs_potions:flagon_belt"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.nice_buckle.description"
+    },
+    "icon": {
+      "id": "minecraft:nether_star"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.nice_buckle.title"
+    }
+  }
+}

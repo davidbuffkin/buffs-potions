@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "buffs_potions:creeper_upgrade",
+  "base": "buffs_potions:flagon_belt",
+  "addition": "minecraft:creeper_head",
+  "result": {
+    "id": "buffs_potions:splash_flagon_belt"
+  }
+}

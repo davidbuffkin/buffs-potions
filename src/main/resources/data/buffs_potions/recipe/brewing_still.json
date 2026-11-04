@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CL ",
+    "C  ",
+    "CC "
+  ],
+  "key": {
+    "C": "minecraft:cobblestone",
+    "L": "minecraft:lightning_rod"
+  },
+  "result": {
+    "id": "buffs_potions:brewing_still",
+    "count": 1
+  }
+}

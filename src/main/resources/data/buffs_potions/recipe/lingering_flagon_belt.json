@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "buffs_potions:dragon_upgrade",
+  "base": "buffs_potions:splash_flagon_belt",
+  "addition": "minecraft:dragon_head",
+  "result": {
+    "id": "buffs_potions:lingering_flagon_belt"
+  }
+}

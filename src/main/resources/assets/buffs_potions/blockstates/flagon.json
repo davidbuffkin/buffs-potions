@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "buffs_potions:block/flagon" },
+    "facing=east": { "model": "buffs_potions:block/flagon", "y": 90 },
+    "facing=south": { "model": "buffs_potions:block/flagon", "y": 180 },
+    "facing=west": { "model": "buffs_potions:block/flagon", "y": 270 }
+  }
+}

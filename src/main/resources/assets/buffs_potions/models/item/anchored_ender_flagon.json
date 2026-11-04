@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "buffs_potions:item/anchored_ender_flagon"
+  }
+}

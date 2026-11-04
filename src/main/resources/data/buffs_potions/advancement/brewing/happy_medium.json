@@ -1,0 +1,23 @@
+{
+  "parent": "buffs_potions:brewing/stay_stacked",
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "brewed": {
+      "trigger": "buffs_potions:strength_medium"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.happy_medium.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "minecraft:blaze_powder"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.happy_medium.title"
+    }
+  }
+}

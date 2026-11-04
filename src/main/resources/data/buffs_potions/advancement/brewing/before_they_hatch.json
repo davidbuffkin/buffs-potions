@@ -1,0 +1,24 @@
+{
+  "parent": "buffs_potions:brewing/end_of_the_rainbow",
+  "criteria": {
+    "hatched": {
+      "trigger": "buffs_potions:before_they_hatch"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.before_they_hatch.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "id": "minecraft:creeper_spawn_egg"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.before_they_hatch.title"
+    }
+  },
+  "rewards": {
+    "experience": 250
+  }
+}

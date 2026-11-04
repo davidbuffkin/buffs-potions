@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "buffs_potions:item/splash_flagon_belt"
+  }
+}

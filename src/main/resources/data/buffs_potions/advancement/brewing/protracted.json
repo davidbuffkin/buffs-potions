@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/hold_me",
+  "criteria": {
+    "drunk": {
+      "trigger": "buffs_potions:protracted"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.protracted.description"
+    },
+    "icon": {
+      "id": "minecraft:redstone_block"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.protracted.title"
+    }
+  }
+}

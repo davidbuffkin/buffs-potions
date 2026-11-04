@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/glass_menagerie",
+  "criteria": {
+    "thrown": {
+      "trigger": "buffs_potions:perfect_timing"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.perfect_timing.description"
+    },
+    "icon": {
+      "id": "minecraft:clock"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.perfect_timing.title"
+    }
+  }
+}

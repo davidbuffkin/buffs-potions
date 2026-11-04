@@ -1,0 +1,102 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "buffs_potions:potion_belt" }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 10, "functions": [
+          { "function": "minecraft:set_potion", "id": "buffs_potions:rain_calling" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:empty", "weight": 4 }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 3,
+        "max": 4
+      },
+      "entries": [
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:night_vision" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:leaping" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:fire_resistance" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:invisibility" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:swiftness" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:water_breathing" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:healing" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:regeneration" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:strength" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "minecraft:slow_falling" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 2, "functions": [
+          { "function": "minecraft:set_potion", "id": "buffs_potions:insight" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 2, "functions": [
+          { "function": "minecraft:set_potion", "id": "buffs_potions:reaching" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 2, "functions": [
+          { "function": "minecraft:set_potion", "id": "buffs_potions:finesse" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 2, "functions": [
+          { "function": "minecraft:set_potion", "id": "buffs_potions:wind_jumping" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 2, "functions": [
+          { "function": "minecraft:set_potion", "id": "buffs_potions:harvesting" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "buffs_potions:heights" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "buffs_potions:depths" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] },
+        { "type": "minecraft:item", "name": "minecraft:potion", "weight": 1, "functions": [
+          { "function": "minecraft:set_potion", "id": "buffs_potions:partial_visitation" },
+          { "function": "minecraft:set_components", "components": { "buffs_potions:mundane": true } }
+        ] }
+      ]
+    }
+  ]
+}

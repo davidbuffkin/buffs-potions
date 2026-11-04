@@ -1,0 +1,24 @@
+{
+  "parent": "buffs_potions:brewing/whos_hungry",
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "filled": {
+      "trigger": "buffs_potions:sweet_tooth"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.sweet_tooth.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "id": "minecraft:honey_block"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.sweet_tooth.title"
+    }
+  }
+}

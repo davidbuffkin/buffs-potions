@@ -1,0 +1,24 @@
+{
+  "parent": "buffs_potions:brewing/base_spirits",
+  "rewards": {
+    "experience": 500
+  },
+  "criteria": {
+    "drunk": {
+      "trigger": "buffs_potions:netherite_essence"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.just_why.description"
+    },
+    "frame": "challenge",
+    "hidden": true,
+    "icon": {
+      "id": "minecraft:netherite_block"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.just_why.title"
+    }
+  }
+}

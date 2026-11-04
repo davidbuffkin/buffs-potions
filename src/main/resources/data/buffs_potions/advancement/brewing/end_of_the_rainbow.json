@@ -1,0 +1,28 @@
+{
+  "parent": "buffs_potions:brewing/questionable",
+  "criteria": {
+    "luck": {
+      "trigger": "buffs_potions:mundane_luck"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.end_of_the_rainbow.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:luck"
+        }
+      },
+      "id": "minecraft:potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.end_of_the_rainbow.title"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

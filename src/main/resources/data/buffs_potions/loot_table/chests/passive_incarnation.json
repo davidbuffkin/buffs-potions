@@ -1,0 +1,584 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 120
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:allay"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:armadillo"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:axolotl"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:bat"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:camel"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:cat"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:chicken"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:cod"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:cow"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:donkey"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:frog"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:glow_squid"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:horse"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:mooshroom"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:mule"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:ocelot"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:parrot"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:pig"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:pufferfish"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:rabbit"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:salmon"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:sheep"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:skeleton_horse"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:sniffer"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:squid"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:strider"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:tadpole"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:tropical_fish"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:turtle"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:splash_potion",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "buffs_potions:incarnation"
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "buffs_potions:essence": {
+                  "entity": "minecraft:villager"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

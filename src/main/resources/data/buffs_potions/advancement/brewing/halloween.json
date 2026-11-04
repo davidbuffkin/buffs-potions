@@ -1,0 +1,28 @@
+{
+  "parent": "buffs_potions:brewing/do_i_know_you",
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "splashed": {
+      "trigger": "buffs_potions:halloween"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.halloween.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "buffs_potions:disguise"
+        }
+      },
+      "id": "minecraft:splash_potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.halloween.title"
+    }
+  }
+}

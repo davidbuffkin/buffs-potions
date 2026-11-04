@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "buffs_potions:item/remedy_flagon_fluid_5_0",
+    "layer1": "buffs_potions:item/remedy_flagon_fluid_5_1",
+    "layer2": "buffs_potions:item/remedy_flagon_fluid_5_2",
+    "layer3": "buffs_potions:item/remedy_flagon_fluid_5_3",
+    "layer4": "buffs_potions:item/anchored_ender_flagon"
+  }
+}

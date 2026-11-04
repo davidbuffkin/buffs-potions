@@ -1,0 +1,22 @@
+{
+  "parent": "buffs_potions:brewing/stay_still",
+  "criteria": {
+    "remedy": {
+      "trigger": "buffs_potions:remedy_still"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.doctor.description"
+    },
+    "icon": {
+      "components": {
+        "buffs_potions:remedy": "minecraft:night_vision"
+      },
+      "id": "minecraft:potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.doctor.title"
+    }
+  }
+}

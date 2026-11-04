@@ -1,0 +1,24 @@
+{
+  "parent": "buffs_potions:brewing/stay_standing",
+  "criteria": {
+    "splash": {
+      "trigger": "buffs_potions:begone"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.begone.description"
+    },
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "buffs_potions:depths"
+        }
+      },
+      "id": "minecraft:splash_potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.begone.title"
+    }
+  }
+}

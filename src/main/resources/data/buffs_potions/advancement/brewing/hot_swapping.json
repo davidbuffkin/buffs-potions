@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/hold_me",
+  "criteria": {
+    "swapped": {
+      "trigger": "buffs_potions:hot_swapping"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.hot_swapping.description"
+    },
+    "icon": {
+      "id": "minecraft:copper_shovel"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.hot_swapping.title"
+    }
+  }
+}

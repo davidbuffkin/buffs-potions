@@ -1,0 +1,34 @@
+{
+  "crab_ambient": {
+    "subtitle": "subtitles.entity.buffs_potions.crab.ambient",
+    "sounds": [
+      "buffs_potions:crab/ambient1",
+      "buffs_potions:crab/ambient2",
+      "buffs_potions:crab/ambient3",
+      "buffs_potions:crab/ambient4",
+      "buffs_potions:crab/ambient5"
+    ]
+  },
+  "crab_hurt": {
+    "subtitle": "subtitles.entity.buffs_potions.crab.hurt",
+    "sounds": [
+      "buffs_potions:crab/hurt1",
+      "buffs_potions:crab/hurt2"
+    ]
+  },
+  "crab_death": {
+    "subtitle": "subtitles.entity.buffs_potions.crab.death",
+    "sounds": [
+      "buffs_potions:crab/death1"
+    ]
+  },
+  "crab_step": {
+    "subtitle": "subtitles.entity.buffs_potions.crab.step",
+    "sounds": [
+      "buffs_potions:crab/step1",
+      "buffs_potions:crab/step2",
+      "buffs_potions:crab/step3",
+      "buffs_potions:crab/step4"
+    ]
+  }
+}

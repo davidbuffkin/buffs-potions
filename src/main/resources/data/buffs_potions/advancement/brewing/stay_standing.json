@@ -1,0 +1,22 @@
+{
+  "parent": "buffs_potions:brewing/stay_still",
+  "criteria": {
+    "crafted": {
+      "conditions": {
+        "recipe_id": "minecraft:brewing_stand"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.stay_standing.description"
+    },
+    "icon": {
+      "id": "minecraft:brewing_stand"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.stay_standing.title"
+    }
+  }
+}

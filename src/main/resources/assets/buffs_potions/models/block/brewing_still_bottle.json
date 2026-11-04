@@ -1,0 +1,17 @@
+{
+  "ambientocclusion": false,
+  "textures": {
+    "particle": "minecraft:block/brewing_stand",
+    "bottle": "minecraft:block/brewing_stand"
+  },
+  "elements": [
+    {
+      "from": [6.125, 2, 12.02],
+      "to": [9.875, 7.25, 12.02],
+      "faces": {
+        "north": { "uv": [0, 7, 5, 14], "texture": "#bottle" },
+        "south": { "uv": [5, 7, 0, 14], "texture": "#bottle" }
+      }
+    }
+  ]
+}

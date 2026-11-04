@@ -1,0 +1,65 @@
+{
+  "parent": "buffs_potions:brewing/air_bender",
+  "criteria": {
+    "all_effects": {
+      "conditions": {
+        "effects": {
+          "minecraft:fire_resistance": {},
+          "minecraft:infested": {},
+          "minecraft:invisibility": {},
+          "minecraft:jump_boost": {},
+          "minecraft:night_vision": {},
+          "minecraft:oozing": {},
+          "minecraft:poison": {},
+          "minecraft:regeneration": {},
+          "minecraft:resistance": {},
+          "minecraft:slow_falling": {},
+          "minecraft:slowness": {},
+          "minecraft:speed": {},
+          "minecraft:strength": {},
+          "minecraft:water_breathing": {},
+          "minecraft:weakness": {},
+          "minecraft:weaving": {},
+          "minecraft:wind_charged": {},
+          "buffs_potions:block_cracked": {},
+          "buffs_potions:block_sense": {},
+          "buffs_potions:block_stacked": {},
+          "buffs_potions:disguise": {},
+          "buffs_potions:dislocated": {},
+          "buffs_potions:finesse": {},
+          "buffs_potions:fumbling": {},
+          "buffs_potions:green_thumb": {},
+          "buffs_potions:insightful": {},
+          "buffs_potions:item_eater": {},
+          "buffs_potions:item_vomiting": {},
+          "buffs_potions:reaching": {},
+          "buffs_potions:seeking": {},
+          "buffs_potions:stoppered": {},
+          "buffs_potions:wind_jumping": {}
+        }
+      },
+      "trigger": "minecraft:effects_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.nether.all_potions.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "id": "minecraft:milk_bucket"
+    },
+    "title": {
+      "translate": "advancements.nether.all_potions.title"
+    }
+  },
+  "requirements": [
+    [
+      "all_effects"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

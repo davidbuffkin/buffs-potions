@@ -1,0 +1,24 @@
+{
+  "parent": "buffs_potions:brewing/root",
+  "criteria": {
+    "belt_drink": {
+      "trigger": "buffs_potions:belt_drink"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.hold_me.description"
+    },
+    "icon": {
+      "id": "buffs_potions:potion_belt"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.hold_me.title"
+    }
+  },
+  "requirements": [
+    [
+      "belt_drink"
+    ]
+  ]
+}

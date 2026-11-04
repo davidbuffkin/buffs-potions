@@ -1,0 +1,22 @@
+{
+  "parent": "buffs_potions:brewing/stay_stacked",
+  "rewards": {
+    "experience": 30
+  },
+  "criteria": {
+    "brewed": {
+      "trigger": "buffs_potions:night_vision_far"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.seeing_long.description"
+    },
+    "icon": {
+      "id": "minecraft:pitcher_plant"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.seeing_long.title"
+    }
+  }
+}

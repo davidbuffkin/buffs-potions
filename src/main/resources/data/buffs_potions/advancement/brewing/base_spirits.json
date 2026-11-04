@@ -1,0 +1,25 @@
+{
+  "parent": "buffs_potions:brewing/see_some_id",
+  "criteria": {
+    "distilled": {
+      "trigger": "buffs_potions:essence_still"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.base_spirits.description"
+    },
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "custom_color": 4054170,
+          "potion": "buffs_potions:latent_eyedentification"
+        }
+      },
+      "id": "minecraft:potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.base_spirits.title"
+    }
+  }
+}

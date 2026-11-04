@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/stay_standing",
+  "criteria": {
+    "potion": {
+      "trigger": "buffs_potions:extended"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.slow_and_steady.description"
+    },
+    "icon": {
+      "id": "minecraft:redstone"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.slow_and_steady.title"
+    }
+  }
+}

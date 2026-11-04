@@ -1,0 +1,24 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "blocked_claw": {
+      "trigger": "buffs_potions:expelliarmus"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.expelliarmus.description"
+    },
+    "icon": {
+      "id": "buffs_potions:crab_claw"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.expelliarmus.title"
+    }
+  },
+  "requirements": [
+    [
+      "blocked_claw"
+    ]
+  ]
+}

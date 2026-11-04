@@ -1,0 +1,22 @@
+{
+  "parent": "buffs_potions:brewing/stay_stacked",
+  "rewards": {
+    "experience": 30
+  },
+  "criteria": {
+    "brewed": {
+      "trigger": "buffs_potions:insight_three"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.thoughtful.description"
+    },
+    "icon": {
+      "id": "minecraft:torchflower"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.thoughtful.title"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "criteria": {
+    "consumed_item": {
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "buffs_potions:gui/advancements/backgrounds/water",
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.root.description"
+    },
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "minecraft:water"
+        }
+      },
+      "id": "minecraft:potion"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "consumed_item"
+    ]
+  ]
+}

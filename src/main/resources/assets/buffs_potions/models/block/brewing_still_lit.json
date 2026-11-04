@@ -1,0 +1,75 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "minecraft:block/furnace_front_on",
+    "front": "minecraft:block/furnace_front_on",
+    "side": "minecraft:block/furnace_side",
+    "top": "minecraft:block/furnace_top",
+    "base": "minecraft:block/brewing_stand_base",
+    "rod": "minecraft:block/lightning_rod"
+  },
+  "elements": [
+    {
+      "from": [5, 0, 9],
+      "to": [11, 2, 15],
+      "faces": {
+        "north": { "uv": [9, 14, 15, 16], "texture": "#base" },
+        "east": { "uv": [5, 14, 11, 16], "texture": "#base" },
+        "south": { "uv": [9, 14, 15, 16], "texture": "#base" },
+        "west": { "uv": [5, 14, 11, 16], "texture": "#base" },
+        "up": { "uv": [9, 5, 15, 11], "texture": "#base" },
+        "down": { "uv": [9, 5, 15, 11], "texture": "#base", "cullface": "down" }
+      }
+    },
+    {
+      "from": [6, 12, 10],
+      "to": [10, 16, 14],
+      "faces": {
+        "north": { "uv": [0, 0, 4, 4], "texture": "#rod" },
+        "east": { "uv": [0, 0, 4, 4], "texture": "#rod" },
+        "south": { "uv": [0, 0, 4, 4], "texture": "#rod" },
+        "west": { "uv": [0, 0, 4, 4], "texture": "#rod" },
+        "up": { "uv": [4, 4, 0, 0], "texture": "#rod" },
+        "down": { "uv": [0, 0, 4, 4], "texture": "#rod" }
+      }
+    },
+    {
+      "from": [0, 0, 0],
+      "to": [16, 16, 8],
+      "faces": {
+        "north": { "uv": [0, 0, 16, 16], "texture": "#side", "cullface": "north" },
+        "east": { "uv": [0, 0, 8, 16], "texture": "#side", "cullface": "east" },
+        "south": { "uv": [0, 0, 16, 16], "texture": "#front" },
+        "west": { "uv": [0, 0, 8, 16], "texture": "#side", "cullface": "west" },
+        "up": { "uv": [0, 0, 16, 8], "texture": "#top", "cullface": "up" },
+        "down": { "uv": [0, 8, 16, 16], "texture": "#top", "cullface": "down" }
+      }
+    },
+    {
+      "from": [7, 22, 19],
+      "to": [9, 24, 21],
+      "rotation": { "angle": -90, "axis": "x", "origin": [7, 13, 19] },
+      "faces": {
+        "north": { "uv": [0, 4, 2, 6], "texture": "#rod" },
+        "east": { "uv": [0, 4, 2, 6], "texture": "#rod" },
+        "south": { "uv": [0, 4, 2, 6], "texture": "#rod" },
+        "west": { "uv": [0, 4, 2, 6], "texture": "#rod" },
+        "up": { "uv": [0, 4, 2, 6], "texture": "#rod" },
+        "down": { "uv": [0, 4, 2, 6], "texture": "#rod" }
+      }
+    },
+    {
+      "from": [7, 23, 13],
+      "to": [9, 30, 15],
+      "rotation": { "angle": -180, "axis": "x", "origin": [7, 18, 13] },
+      "faces": {
+        "north": { "uv": [0, 9, 2, 16], "texture": "#rod" },
+        "east": { "uv": [0, 9, 2, 16], "texture": "#rod" },
+        "south": { "uv": [0, 9, 2, 16], "texture": "#rod" },
+        "west": { "uv": [0, 9, 2, 16], "texture": "#rod" },
+        "up": { "uv": [0, 4, 2, 6], "texture": "#rod" },
+        "down": { "uv": [0, 4, 2, 6], "texture": "#rod" }
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "buffs_potions:evil_apothecary",
+  "biomes": "#buffs_potions:has_structure/evil_apothecary",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin",
+  "start_pool": "buffs_potions:evil_apothecary",
+  "size": 1,
+  "use_expansion_hack": false,
+  "max_distance_from_center": 80
+}

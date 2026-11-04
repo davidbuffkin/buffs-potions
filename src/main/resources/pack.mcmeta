@@ -1,0 +1,23 @@
+{
+  "pack": {
+    "description": "Buff's Potions",
+    "max_format": [107, 1],
+    "min_format": [107, 1]
+  },
+  "filter": {
+    "block": [
+      {
+        "namespace": "^minecraft$",
+        "path": "^advancement/nether/brew_potion\\.json$"
+      },
+      {
+        "namespace": "^minecraft$",
+        "path": "^advancement/nether/all_potions\\.json$"
+      },
+      {
+        "namespace": "^minecraft$",
+        "path": "^advancement/nether/all_effects\\.json$"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "wants": {
+    "id": "minecraft:potion",
+    "components": {
+      "minecraft:potion_contents": {
+        "potion": "buffs_potions:suspicious_brew",
+        "custom_color": 8923946
+      }
+    }
+  },
+  "gives": {
+    "id": "minecraft:emerald"
+  },
+  "max_uses": 4.0,
+  "reputation_discount": 0.05,
+  "xp": 1.0
+}

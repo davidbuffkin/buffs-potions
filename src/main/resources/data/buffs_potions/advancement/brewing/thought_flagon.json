@@ -1,0 +1,25 @@
+{
+  "parent": "buffs_potions:brewing/nice_buckle_question",
+  "rewards": {
+    "experience": 100
+  },
+  "criteria": {
+    "crafted": {
+      "conditions": {
+        "recipe_id": "buffs_potions:lingering_flagon_belt"
+      },
+      "trigger": "minecraft:recipe_crafted"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.thought_flagon.description"
+    },
+    "icon": {
+      "id": "minecraft:dragon_head"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.thought_flagon.title"
+    }
+  }
+}

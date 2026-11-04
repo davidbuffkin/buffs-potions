@@ -1,0 +1,252 @@
+{
+  "format_version": "1.21.11",
+  "credit": "Made with Blockbench",
+  "textures": {
+    "0": "buffs_potions:block/anchored_exterior",
+    "1": "buffs_potions:block/anchored_top",
+    "3": "buffs_potions:block/anchored_interior",
+    "particle": "buffs_potions:block/anchored_exterior"
+  },
+  "elements": [
+    {
+      "name": "base_exterior",
+      "from": [
+        4,
+        0,
+        4
+      ],
+      "to": [
+        12,
+        12,
+        12
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7,
+          0,
+          7
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            4,
+            6
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            4,
+            0,
+            8,
+            6
+          ],
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            4,
+            6,
+            8,
+            12
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            0,
+            6,
+            4,
+            12
+          ],
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            8,
+            0,
+            12,
+            4
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            8,
+            4,
+            12,
+            8
+          ],
+          "texture": "#0",
+          "cullface": "down"
+        }
+      }
+    },
+    {
+      "name": "base_interior",
+      "from": [
+        12,
+        12,
+        12
+      ],
+      "to": [
+        4,
+        1,
+        4
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          9,
+          7,
+          9
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            5.5,
+            4,
+            0
+          ],
+          "texture": "#3"
+        },
+        "east": {
+          "uv": [
+            4,
+            5.5,
+            8,
+            0
+          ],
+          "texture": "#3"
+        },
+        "south": {
+          "uv": [
+            4,
+            11.5,
+            8,
+            6
+          ],
+          "texture": "#3"
+        },
+        "west": {
+          "uv": [
+            0,
+            11.5,
+            4,
+            6
+          ],
+          "texture": "#3"
+        },
+        "up": {
+          "uv": [
+            8,
+            0,
+            12,
+            4
+          ],
+          "texture": "#3"
+        },
+        "down": {
+          "uv": [
+            8,
+            4,
+            12,
+            8
+          ],
+          "texture": "#3"
+        }
+      }
+    },
+    {
+      "name": "top",
+      "from": [
+        5,
+        12,
+        5
+      ],
+      "to": [
+        11,
+        13,
+        11
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7,
+          12,
+          7
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            6,
+            0,
+            12,
+            1
+          ],
+          "texture": "#1"
+        },
+        "east": {
+          "uv": [
+            6,
+            1,
+            12,
+            2
+          ],
+          "texture": "#1"
+        },
+        "south": {
+          "uv": [
+            6,
+            2,
+            12,
+            3
+          ],
+          "texture": "#1"
+        },
+        "west": {
+          "uv": [
+            0,
+            6,
+            6,
+            7
+          ],
+          "texture": "#1"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ],
+          "texture": "#1"
+        }
+      }
+    }
+  ],
+  "display": {
+    "ground": {
+      "translation": [
+        1,
+        2,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  }
+}

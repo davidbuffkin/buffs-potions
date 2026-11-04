@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "buffs_potions:calibrated_sculk_shrieker"
+      }
+    },
+    "has_sculk_shrieker": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:sculk_shrieker"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_sculk_shrieker"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "buffs_potions:calibrated_sculk_shrieker"
+    ]
+  }
+}

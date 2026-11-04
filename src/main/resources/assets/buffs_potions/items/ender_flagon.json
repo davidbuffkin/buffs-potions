@@ -1,0 +1,359 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "buffs_potions:remedy_dose",
+    "on_true": {
+      "type": "minecraft:range_dispatch",
+      "property": "buffs_potions:flagon_doses",
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "buffs_potions:item/ender_flagon"
+      },
+      "entries": [
+        {
+          "threshold": 1.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/remedy_ender_flagon_1",
+            "tints": [
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 0
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 1
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 2
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 3
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 2.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/remedy_ender_flagon_2",
+            "tints": [
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 0
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 1
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 2
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 3
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 3.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/remedy_ender_flagon_3",
+            "tints": [
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 0
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 1
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 2
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 3
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 4.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/remedy_ender_flagon_4",
+            "tints": [
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 0
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 1
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 2
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 3
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 5.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/remedy_ender_flagon_5",
+            "tints": [
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 0
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 1
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 2
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 3
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 6.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/remedy_ender_flagon_6",
+            "tints": [
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 0
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 1
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 2
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 3
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 7.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/remedy_ender_flagon_7",
+            "tints": [
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 0
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 1
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 2
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 3
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 8.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/remedy_ender_flagon_8",
+            "tints": [
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 0
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 1
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 2
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 3
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 9.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/remedy_ender_flagon_9",
+            "tints": [
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 0
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 1
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 2
+              },
+              {
+                "type": "buffs_potions:remedy_band",
+                "band": 3
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:range_dispatch",
+      "property": "buffs_potions:flagon_doses",
+      "fallback": {
+        "type": "minecraft:model",
+        "model": "buffs_potions:item/ender_flagon"
+      },
+      "entries": [
+        {
+          "threshold": 1.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/ender_flagon_1",
+            "tints": [
+              {
+                "type": "buffs_potions:flagon_fluid"
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 2.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/ender_flagon_2",
+            "tints": [
+              {
+                "type": "buffs_potions:flagon_fluid"
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 3.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/ender_flagon_3",
+            "tints": [
+              {
+                "type": "buffs_potions:flagon_fluid"
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 4.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/ender_flagon_4",
+            "tints": [
+              {
+                "type": "buffs_potions:flagon_fluid"
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 5.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/ender_flagon_5",
+            "tints": [
+              {
+                "type": "buffs_potions:flagon_fluid"
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 6.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/ender_flagon_6",
+            "tints": [
+              {
+                "type": "buffs_potions:flagon_fluid"
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 7.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/ender_flagon_7",
+            "tints": [
+              {
+                "type": "buffs_potions:flagon_fluid"
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 8.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/ender_flagon_8",
+            "tints": [
+              {
+                "type": "buffs_potions:flagon_fluid"
+              }
+            ]
+          }
+        },
+        {
+          "threshold": 9.0,
+          "model": {
+            "type": "minecraft:model",
+            "model": "buffs_potions:item/ender_flagon_9",
+            "tints": [
+              {
+                "type": "buffs_potions:flagon_fluid"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

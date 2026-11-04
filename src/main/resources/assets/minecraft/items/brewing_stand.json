@@ -1,0 +1,23 @@
+{
+  "model": {
+    "type": "minecraft:composite",
+    "models": [
+      {
+        "type": "minecraft:model",
+        "model": "buffs_potions:item/brewing_stand_block"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "buffs_potions:item/brewing_stand_empty0"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "buffs_potions:item/brewing_stand_empty1"
+      },
+      {
+        "type": "minecraft:model",
+        "model": "buffs_potions:item/brewing_stand_empty2"
+      }
+    ]
+  }
+}

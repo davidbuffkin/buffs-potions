@@ -1,0 +1,22 @@
+{
+  "model": {
+    "type": "buffs_potions:belt_contents",
+    "cover_dose": true,
+    "closed": {
+      "type": "minecraft:model",
+      "model": "buffs_potions:item/potion_belt"
+    },
+    "open": {
+      "type": "minecraft:model",
+      "model": "buffs_potions:item/potion_belt_open"
+    },
+    "one_bottle": {
+      "type": "minecraft:model",
+      "model": "buffs_potions:item/one_bottle"
+    },
+    "five_bottles": {
+      "type": "minecraft:model",
+      "model": "buffs_potions:item/five_bottles"
+    }
+  }
+}

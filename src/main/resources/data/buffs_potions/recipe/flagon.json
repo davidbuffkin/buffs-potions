@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "CAC",
+    "G G",
+    "CGC"
+  ],
+  "key": {
+    "C": "minecraft:copper_ingot",
+    "A": "minecraft:amethyst_shard",
+    "G": "minecraft:glass"
+  },
+  "result": {
+    "id": "buffs_potions:flagon",
+    "count": 1
+  }
+}

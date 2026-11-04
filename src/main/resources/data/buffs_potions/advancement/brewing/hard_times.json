@@ -1,0 +1,23 @@
+{
+  "parent": "buffs_potions:brewing/base_spirits",
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "eaten": {
+      "trigger": "buffs_potions:hard_times"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.hard_times.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "id": "minecraft:stick"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.hard_times.title"
+    }
+  }
+}

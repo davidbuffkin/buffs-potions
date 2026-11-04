@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/stay_still",
+  "criteria": {
+    "cauldron": {
+      "trigger": "buffs_potions:cauldron_water"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.still_waters.description"
+    },
+    "icon": {
+      "id": "minecraft:cauldron"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.still_waters.title"
+    }
+  }
+}

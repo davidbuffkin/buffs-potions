@@ -1,0 +1,22 @@
+{
+  "parent": "buffs_potions:brewing/hold_me",
+  "rewards": {
+    "experience": 30
+  },
+  "criteria": {
+    "drunk": {
+      "trigger": "buffs_potions:whos_hungry"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.whos_hungry.description"
+    },
+    "icon": {
+      "id": "minecraft:honey_bottle"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.whos_hungry.title"
+    }
+  }
+}

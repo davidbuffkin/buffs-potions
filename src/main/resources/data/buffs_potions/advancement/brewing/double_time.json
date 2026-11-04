@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/stay_still",
+  "criteria": {
+    "bellows": {
+      "trigger": "buffs_potions:bellows_boost"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.double_time.description"
+    },
+    "icon": {
+      "id": "buffs_potions:bellows"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.double_time.title"
+    }
+  }
+}

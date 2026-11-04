@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/hold_me",
+  "criteria": {
+    "drunk": {
+      "trigger": "buffs_potions:amplified"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.amplified.description"
+    },
+    "icon": {
+      "id": "minecraft:glowstone"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.amplified.title"
+    }
+  }
+}

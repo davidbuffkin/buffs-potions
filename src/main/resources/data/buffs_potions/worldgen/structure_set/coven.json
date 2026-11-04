@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "buffs_potions:coven",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 40,
+    "separation": 16,
+    "salt": 734218903
+  }
+}

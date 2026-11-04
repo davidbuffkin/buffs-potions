@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/glass_menagerie",
+  "criteria": {
+    "effects": {
+      "trigger": "buffs_potions:air_bender"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.air_bender.description"
+    },
+    "icon": {
+      "id": "minecraft:feather"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.air_bender.title"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "buffs_potions:block/calibrated_sculk_shrieker"
+    }
+  }
+}

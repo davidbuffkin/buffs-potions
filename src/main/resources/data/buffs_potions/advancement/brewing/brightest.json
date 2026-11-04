@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/stay_standing",
+  "criteria": {
+    "potion": {
+      "trigger": "buffs_potions:level_two"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.brightest.description"
+    },
+    "icon": {
+      "id": "minecraft:glowstone_dust"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.brightest.title"
+    }
+  }
+}

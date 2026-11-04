@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/elixir_of_life",
+  "criteria": {
+    "transferred": {
+      "trigger": "buffs_potions:anchors_aweigh"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.anchors_aweigh.description"
+    },
+    "icon": {
+      "id": "buffs_potions:anchored_ender_flagon"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.anchors_aweigh.title"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "buffs_potions:brewing/hold_me",
+  "rewards": {
+    "experience": 20
+  },
+  "criteria": {
+    "filled": {
+      "trigger": "buffs_potions:glass_menagerie"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.glass_menagerie.description"
+    },
+    "icon": {
+      "id": "minecraft:glass"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.glass_menagerie.title"
+    }
+  }
+}

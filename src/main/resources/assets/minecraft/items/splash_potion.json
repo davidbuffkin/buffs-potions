@@ -1,0 +1,39 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:has_component",
+    "component": "buffs_potions:remedy",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "buffs_potions:item/remedy_splash",
+      "tints": [
+        {
+          "type": "buffs_potions:remedy_band",
+          "band": 0
+        },
+        {
+          "type": "buffs_potions:remedy_band",
+          "band": 1
+        },
+        {
+          "type": "buffs_potions:remedy_band",
+          "band": 2
+        },
+        {
+          "type": "buffs_potions:remedy_band",
+          "band": 3
+        }
+      ]
+    },
+    "on_false": {
+      "type": "minecraft:model",
+      "model": "minecraft:item/splash_potion",
+      "tints": [
+        {
+          "type": "minecraft:potion",
+          "default": -13083194
+        }
+      ]
+    }
+  }
+}

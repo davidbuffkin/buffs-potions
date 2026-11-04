@@ -1,0 +1,27 @@
+{
+  "parent": "buffs_potions:brewing/its_elementary",
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "crops": {
+      "trigger": "buffs_potions:vermillion"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.vermillion.description"
+    },
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "buffs_potions:harvesting"
+        }
+      },
+      "id": "minecraft:potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.vermillion.title"
+    }
+  }
+}

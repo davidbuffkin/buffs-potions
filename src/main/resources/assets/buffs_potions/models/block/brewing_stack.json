@@ -1,0 +1,310 @@
+{
+  "textures": {
+    "particle": "buffs_potions:block/brewing_stack_end_rod",
+    "base": "buffs_potions:block/brewing_stack_base",
+    "rod": "buffs_potions:block/brewing_stack_end_rod",
+    "top": "buffs_potions:block/brewing_stack_top",
+    "back": "buffs_potions:block/brewing_stack_back"
+  },
+  "elements": [
+    {
+      "name": "end rod",
+      "from": [
+        7,
+        3,
+        7
+      ],
+      "to": [
+        9,
+        15,
+        9
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            0,
+            6,
+            12
+          ],
+          "texture": "#rod"
+        },
+        "east": {
+          "uv": [
+            6,
+            0,
+            8,
+            12
+          ],
+          "texture": "#rod"
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            2,
+            12
+          ],
+          "texture": "#rod"
+        },
+        "west": {
+          "uv": [
+            2,
+            0,
+            4,
+            12
+          ],
+          "texture": "#rod"
+        },
+        "up": {
+          "uv": [
+            8,
+            0,
+            10,
+            2
+          ],
+          "texture": "#rod",
+          "rotation": 180
+        },
+        "down": {
+          "uv": [
+            8,
+            2,
+            10,
+            4
+          ],
+          "texture": "#rod",
+          "rotation": 180
+        }
+      }
+    },
+    {
+      "name": "base",
+      "from": [
+        2,
+        0,
+        2
+      ],
+      "to": [
+        14,
+        2,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            6,
+            2,
+            12,
+            3
+          ],
+          "texture": "#base"
+        },
+        "east": {
+          "uv": [
+            6,
+            3,
+            12,
+            4
+          ],
+          "texture": "#base"
+        },
+        "south": {
+          "uv": [
+            6,
+            0,
+            12,
+            1
+          ],
+          "texture": "#base"
+        },
+        "west": {
+          "uv": [
+            6,
+            1,
+            12,
+            2
+          ],
+          "texture": "#base"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            6,
+            6
+          ],
+          "texture": "#base",
+          "rotation": 180
+        },
+        "down": {
+          "uv": [
+            0,
+            6,
+            6,
+            12
+          ],
+          "texture": "#base",
+          "rotation": 180,
+          "cullface": "down"
+        }
+      }
+    },
+    {
+      "name": "top",
+      "from": [
+        6,
+        15,
+        2
+      ],
+      "to": [
+        10,
+        16,
+        10
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8,
+            2,
+            12,
+            3
+          ],
+          "texture": "#top"
+        },
+        "east": {
+          "uv": [
+            8,
+            0,
+            16,
+            1
+          ],
+          "texture": "#top"
+        },
+        "south": {
+          "uv": [
+            8,
+            1,
+            12,
+            2
+          ],
+          "texture": "#top"
+        },
+        "west": {
+          "uv": [
+            0,
+            8,
+            8,
+            9
+          ],
+          "texture": "#top"
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            4,
+            8
+          ],
+          "texture": "#top",
+          "rotation": 180
+        },
+        "down": {
+          "uv": [
+            4,
+            0,
+            8,
+            8
+          ],
+          "texture": "#top",
+          "rotation": 180
+        }
+      }
+    },
+    {
+      "name": "back",
+      "from": [
+        6,
+        0,
+        0
+      ],
+      "to": [
+        10,
+        16,
+        2
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            1,
+            4,
+            9
+          ],
+          "texture": "#back"
+        },
+        "east": {
+          "uv": [
+            5,
+            1,
+            6,
+            9
+          ],
+          "texture": "#back"
+        },
+        "south": {
+          "uv": [
+            0,
+            1,
+            2,
+            9
+          ],
+          "texture": "#back"
+        },
+        "west": {
+          "uv": [
+            4,
+            1,
+            5,
+            9
+          ],
+          "texture": "#back"
+        },
+        "up": {
+          "uv": [
+            7,
+            0,
+            9,
+            1
+          ],
+          "texture": "#back",
+          "rotation": 180
+        },
+        "down": {
+          "uv": [
+            5,
+            0,
+            7,
+            1
+          ],
+          "texture": "#back",
+          "rotation": 180
+        }
+      }
+    }
+  ],
+  "display": {
+    "ground": {
+      "translation": [
+        1,
+        2,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  }
+}

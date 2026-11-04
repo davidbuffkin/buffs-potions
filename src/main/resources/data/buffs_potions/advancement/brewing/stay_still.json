@@ -1,0 +1,31 @@
+{
+  "parent": "buffs_potions:brewing/root",
+  "criteria": {
+    "brewing_still": {
+      "conditions": {
+        "items": [
+          {
+            "items": "buffs_potions:brewing_still"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.stay_still.description"
+    },
+    "icon": {
+      "id": "buffs_potions:brewing_still"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.stay_still.title"
+    }
+  },
+  "requirements": [
+    [
+      "brewing_still"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "parent": "buffs_potions:brewing/stay_still",
+  "criteria": {
+    "brew": {
+      "trigger": "buffs_potions:suspicious_brew"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.questionable.description"
+    },
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "custom_color": 8928042,
+          "potion": "buffs_potions:suspicious_brew"
+        }
+      },
+      "id": "minecraft:potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.questionable.title"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "parent": "buffs_potions:brewing/base_spirits",
+  "criteria": {
+    "distilled": {
+      "trigger": "buffs_potions:player_essence"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.do_i_know_you.description"
+    },
+    "icon": {
+      "id": "minecraft:name_tag"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.do_i_know_you.title"
+    }
+  }
+}

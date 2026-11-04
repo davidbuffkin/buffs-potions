@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "buffs_potions:lingering_flagon_belt"
+      }
+    },
+    "has_dragon_upgrade": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "buffs_potions:dragon_upgrade"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_dragon_upgrade"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "buffs_potions:lingering_flagon_belt"
+    ]
+  }
+}

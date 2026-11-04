@@ -1,0 +1,28 @@
+{
+  "parent": "buffs_potions:brewing/amplified",
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "gained": {
+      "trigger": "buffs_potions:reach_four"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.touch_faith.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "buffs_potions:reaching"
+        }
+      },
+      "id": "minecraft:potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.touch_faith.title"
+    }
+  }
+}

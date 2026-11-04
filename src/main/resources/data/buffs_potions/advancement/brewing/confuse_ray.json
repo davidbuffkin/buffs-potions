@@ -1,0 +1,27 @@
+{
+  "parent": "buffs_potions:brewing/begone",
+  "rewards": {
+    "experience": 50
+  },
+  "criteria": {
+    "cloud": {
+      "trigger": "buffs_potions:confuse_ray"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.buffs_potions.brewing.confuse_ray.description"
+    },
+    "icon": {
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "buffs_potions:instant_confusion"
+        }
+      },
+      "id": "minecraft:lingering_potion"
+    },
+    "title": {
+      "translate": "advancements.buffs_potions.brewing.confuse_ray.title"
+    }
+  }
+}

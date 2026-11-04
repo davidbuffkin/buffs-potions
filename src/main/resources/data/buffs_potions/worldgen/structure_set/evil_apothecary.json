@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "buffs_potions:evil_apothecary",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 36,
+    "separation": 13,
+    "salt": 591773441
+  }
+}
