@@ -2,12 +2,16 @@ package com.buffspotions.belt;
 
 import com.buffspotions.flagon.FlagonContents;
 import com.buffspotions.item.FlagonBeltItem;
+import com.buffspotions.menu.BeltItemContainer;
 import com.buffspotions.registry.ModDataComponents;
 import com.buffspotions.registry.ModItems;
 import com.buffspotions.registry.ModPotions;
+import io.netty.buffer.Unpooled;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -150,6 +154,27 @@ class ThrowingBeltTest {
 
         PotionContents unchanged = BeltEnchantments.modifiedContents(new PotionContents(Potions.STRENGTH), ModItems.LINGERING_FLAGON_BELT.get().getDefaultInstance());
         assertTrue(unchanged.is(Potions.STRENGTH));
+    }
+
+    @Test
+    void beltOpenedFromAnotherContainerKeepsItsBottleRow(MinecraftServer server) {
+        SimpleContainer chest = new SimpleContainer(1);
+        assertSameSlotCount(server, chest, ModItems.SPLASH_FLAGON_BELT.get().getDefaultInstance());
+        assertSameSlotCount(server, chest, ModItems.LINGERING_FLAGON_BELT.get().getDefaultInstance());
+        ItemStack drinking = ModItems.SPLASH_FLAGON_BELT.get().getDefaultInstance();
+        FlagonBeltItem.setThrowing(drinking, false);
+        assertSameSlotCount(server, chest, drinking);
+    }
+
+    private static void assertSameSlotCount(MinecraftServer server, SimpleContainer chest, ItemStack belt) {
+        chest.setItem(0, belt.copy());
+        BeltItemContainer opened = new BeltItemContainer(null, chest, 0);
+        RegistryFriendlyByteBuf data = new RegistryFriendlyByteBuf(Unpooled.buffer(), server.registryAccess());
+        BeltItemContainer.writeOpenData(data, chest.getItem(0));
+        BeltItemContainer received = BeltItemContainer.fromNetwork(null, data);
+        assertEquals(opened.getContainerSize(), received.getContainerSize());
+        assertEquals(BeltContents.BASE_SLOTS + BeltContents.bottleSlotCount(chest.getItem(0)), received.getContainerSize());
+        data.release();
     }
 
     private static ItemStack flagon(ItemStack dose) {

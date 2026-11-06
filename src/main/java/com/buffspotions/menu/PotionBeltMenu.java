@@ -23,7 +23,7 @@ public final class PotionBeltMenu extends AbstractContainerMenu {
     private final int bottleSlots;
 
     public PotionBeltMenu(int containerId, Inventory inventory, RegistryFriendlyByteBuf data) {
-        this(containerId, inventory, data.readVarInt());
+        this(containerId, inventory, BeltItemContainer.fromNetwork(inventory.player, data));
     }
 
     public PotionBeltMenu(int containerId, Inventory inventory, int source) {

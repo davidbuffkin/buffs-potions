@@ -4,7 +4,7 @@ import com.buffspotions.belt.BeltContents;
 import com.buffspotions.belt.BeltEnchantments;
 import com.buffspotions.equipment.BeltSlotAccess;
 import com.buffspotions.item.PotionBeltItem;
-import com.buffspotions.registry.ModItems;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -24,13 +24,29 @@ public final class BeltItemContainer implements Container {
     private final ItemStack mirror;
 
     public BeltItemContainer(Player player, int source) {
-        this(player, source, null, 0, source == EXTERNAL
-                ? new ItemStack(ModItems.POTION_BELT.get())
-                : ItemStack.EMPTY);
+        this(player, source, null, 0, ItemStack.EMPTY);
+    }
+
+    /** Client view of a belt opened from a chest or other container. */
+    public BeltItemContainer(Player player, ItemStack mirror) {
+        this(player, EXTERNAL, null, 0, mirror.copy());
     }
 
     public BeltItemContainer(Player player, Container external, int externalSlot) {
         this(player, EXTERNAL, external, externalSlot, ItemStack.EMPTY);
+    }
+
+    public static void writeOpenData(RegistryFriendlyByteBuf buffer, ItemStack belt) {
+        buffer.writeVarInt(EXTERNAL);
+        ItemStack.OPTIONAL_STREAM_CODEC.encode(buffer, belt);
+    }
+
+    public static BeltItemContainer fromNetwork(Player player, RegistryFriendlyByteBuf data) {
+        int source = data.readVarInt();
+        if (source == EXTERNAL) {
+            return new BeltItemContainer(player, ItemStack.OPTIONAL_STREAM_CODEC.decode(data));
+        }
+        return new BeltItemContainer(player, source);
     }
 
     private BeltItemContainer(Player player, int source, Container external, int externalSlot, ItemStack mirror) {

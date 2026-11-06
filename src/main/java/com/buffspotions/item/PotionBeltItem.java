@@ -65,7 +65,7 @@ public class PotionBeltItem extends Item {
                         (containerId, inventory, owner) -> new PotionBeltMenu(containerId, inventory, container, slot),
                         title(container.getItem(slot))
                 ),
-                buffer -> buffer.writeVarInt(BeltItemContainer.EXTERNAL)
+                buffer -> BeltItemContainer.writeOpenData(buffer, container.getItem(slot))
         );
     }
 
