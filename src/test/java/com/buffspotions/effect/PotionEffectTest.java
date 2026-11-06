@@ -539,6 +539,7 @@ class PotionBrewingTest {
         assertEquals(48, EyedTuning.seekChunks(2));
         assertEquals(64, EyedTuning.seekChunks(3));
         assertEquals(64, EyedTuning.seekChunks(7));
+        assertEquals(EntityTypes.WITHER_SKELETON, MobDrops.type(Items.COAL).orElseThrow());
         assertEquals(EntityTypes.ZOMBIE, MobDrops.type(Items.ROTTEN_FLESH).orElseThrow());
         assertEquals(EntityTypes.CREEPER, MobDrops.type(Items.GUNPOWDER).orElseThrow());
         assertEquals(EntityTypes.BLAZE, MobDrops.type(Items.BLAZE_ROD).orElseThrow());
@@ -759,9 +760,11 @@ class PotionBrewingTest {
         assertTrue(splash.is(Items.SPLASH_POTION));
         assertTrue(splash.getOrDefault(ModDataComponents.MUNDANE.get(), false));
         assertPotion(splash, Potions.NIGHT_VISION);
-        assertFalse(StillBrewing.hasMix(brewing, splash, new ItemStack(Items.DRAGON_BREATH)));
-        ItemStack stillSplash = StillBrewing.mix(brewing, new ItemStack(Items.DRAGON_BREATH), splash.copy());
-        assertTrue(stillSplash.isEmpty());
+        assertTrue(StillBrewing.hasMix(brewing, splash, new ItemStack(Items.DRAGON_BREATH)));
+        ItemStack lingering = StillBrewing.mix(brewing, new ItemStack(Items.DRAGON_BREATH), splash.copy());
+        assertTrue(lingering.is(Items.LINGERING_POTION));
+        assertTrue(lingering.getOrDefault(ModDataComponents.MUNDANE.get(), false));
+        assertPotion(lingering, Potions.NIGHT_VISION);
         ItemStack splashInverted = StillBrewing.mix(brewing, new ItemStack(Items.FERMENTED_SPIDER_EYE), splash.copy());
         assertTrue(splashInverted.is(Items.SPLASH_POTION));
         assertTrue(splashInverted.getOrDefault(ModDataComponents.MUNDANE.get(), false));

@@ -153,10 +153,10 @@ public final class BuffsPotionsConfig {
 
     public static final ModConfigSpec.IntValue HEALING_BASE = BUILDER
             .comment(
-                    "Instant Health restores base + perLevel * level health points. Level I is 1, so the default is 6, then 8, then 10.",
+                    "Instant Health restores base + perLevel * level health points. Level I is 1, so the default is 4, then 6, then 8.",
                     "A health point is half a heart. Lingering clouds apply half of that, once a second. Splash potions still scale it by distance."
             )
-            .defineInRange("vanilla.healing.base", 4, 0, 10000);
+            .defineInRange("vanilla.healing.base", 2, 0, 10000);
 
     public static final ModConfigSpec.IntValue HEALING_PER_LEVEL = BUILDER
             .comment("Added to Instant Health for each potion level. Level I is 1.")
@@ -164,21 +164,21 @@ public final class BuffsPotionsConfig {
 
     public static final ModConfigSpec.IntValue HARMING_BASE = BUILDER
             .comment(
-                    "Instant Damage deals base + perLevel * level health points. Level I is 1, so the default is 8, then 11, then 14.",
+                    "Instant Damage deals base + perLevel * level health points. Level I is 1, so the default is 6, then 8, then 10.",
                     "Lingering clouds apply half of that, once a second. Splash potions still scale it by distance."
             )
-            .defineInRange("vanilla.harming.base", 5, 0, 10000);
+            .defineInRange("vanilla.harming.base", 4, 0, 10000);
 
     public static final ModConfigSpec.IntValue HARMING_PER_LEVEL = BUILDER
             .comment("Added to Instant Damage for each potion level. Level I is 1.")
-            .defineInRange("vanilla.harming.perLevel", 3, 0, 10000);
+            .defineInRange("vanilla.harming.perLevel", 2, 0, 10000);
 
     public static final ModConfigSpec.DoubleValue SWIFTNESS_PERCENT = BUILDER
             .comment(
-                    "Swiftness multiplies this percent by growth^level. Level I is 1, so the default is 24%, then 48%, then 96%.",
+                    "Swiftness multiplies this percent by growth^level. Level I is 1, so the default is 32%, then 64%, then 128%.",
                     "The bonus is a multiplier on walking speed, the same way vanilla's 20% is."
             )
-            .defineInRange("vanilla.swiftness.percent", 12.0, 0.0, 1000.0);
+            .defineInRange("vanilla.swiftness.percent", 16.0, 0.0, 1000.0);
 
     public static final ModConfigSpec.DoubleValue SWIFTNESS_GROWTH = BUILDER
             .comment("Swiftness raises the percent by this factor once per potion level. 2 doubles it at each level.")
@@ -200,8 +200,8 @@ public final class BuffsPotionsConfig {
             .defineInRange("vanilla.strength.perLevel", 2, -1000, 1000);
 
     public static final ModConfigSpec.IntValue WEAKNESS_BASE = BUILDER
-            .comment("Weakness subtracts base + perLevel * level melee damage. Level I is 1, so the default is -4, then -6, then -8.")
-            .defineInRange("vanilla.weakness.base", 2, -1000, 1000);
+            .comment("Weakness subtracts base + perLevel * level melee damage. Level I is 1, so the default is -3, then -5, then -7.")
+            .defineInRange("vanilla.weakness.base", 1, -1000, 1000);
 
     public static final ModConfigSpec.IntValue WEAKNESS_PER_LEVEL = BUILDER
             .comment("Added to the Weakness penalty for each potion level. Level I is 1.")
@@ -391,19 +391,19 @@ public final class BuffsPotionsConfig {
     }
 
     public static int healing(int level) {
-        int base = SPEC.isLoaded() ? HEALING_BASE.get() : 4;
+        int base = SPEC.isLoaded() ? HEALING_BASE.get() : 2;
         int perLevel = SPEC.isLoaded() ? HEALING_PER_LEVEL.get() : 2;
         return Math.max(0, linear(base, perLevel, level));
     }
 
     public static int harming(int level) {
-        int base = SPEC.isLoaded() ? HARMING_BASE.get() : 5;
-        int perLevel = SPEC.isLoaded() ? HARMING_PER_LEVEL.get() : 3;
+        int base = SPEC.isLoaded() ? HARMING_BASE.get() : 4;
+        int perLevel = SPEC.isLoaded() ? HARMING_PER_LEVEL.get() : 2;
         return Math.max(0, linear(base, perLevel, level));
     }
 
     public static double swiftnessBonus(int level) {
-        double percent = SPEC.isLoaded() ? SWIFTNESS_PERCENT.get() : 12.0;
+        double percent = SPEC.isLoaded() ? SWIFTNESS_PERCENT.get() : 16.0;
         double growth = SPEC.isLoaded() ? SWIFTNESS_GROWTH.get() : 2.0;
         return percent / 100.0 * Math.pow(growth, level);
     }
@@ -420,7 +420,7 @@ public final class BuffsPotionsConfig {
     }
 
     public static double weaknessPenalty(int level) {
-        int base = SPEC.isLoaded() ? WEAKNESS_BASE.get() : 2;
+        int base = SPEC.isLoaded() ? WEAKNESS_BASE.get() : 1;
         int perLevel = SPEC.isLoaded() ? WEAKNESS_PER_LEVEL.get() : 2;
         return linear(base, perLevel, level);
     }
