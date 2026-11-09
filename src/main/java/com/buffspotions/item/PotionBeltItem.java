@@ -88,7 +88,7 @@ public class PotionBeltItem extends Item {
                 && !player.getCooldowns().isOnCooldown(belt);
     }
 
-    /** A belt in hand whose active slot cannot be drunk or thrown. Right-click opens that belt. */
+    /** A belt in hand whose active slot cannot be drunk or thrown. Right-click opens that belt when the click does not use a block or entity. */
     public static boolean opensWhenUndrinkable(Player player, ItemStack belt) {
         if (!(belt.getItem() instanceof PotionBeltItem) || player.isSpectator()) {
             return false;

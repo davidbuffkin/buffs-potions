@@ -431,7 +431,8 @@ public final class BuffsPotionsClient {
             ItemStack shown = useBelt ? BeltSource.shown(minecraft.player) : ItemStack.EMPTY;
             boolean shownActs = useBelt
                     && (PotionBeltItem.canDrink(minecraft.player, shown) || repeatsThrow(minecraft.player, shown));
-            if (!shownActs) {
+            boolean worldClick = BeltClickPriority.passes(minecraft.player, minecraft.hitResult, thisHand);
+            if (!shownActs && !worldClick) {
                 event.setCanceled(true);
                 event.setSwingHand(false);
                 if (!beltMenuSent && minecraft.gameMode != null) {

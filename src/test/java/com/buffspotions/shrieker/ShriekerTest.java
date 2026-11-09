@@ -6,7 +6,12 @@ import java.util.Optional;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Style;
 import net.minecraft.network.chat.TextColor;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.neoforged.testframework.junit.EphemeralTestServerProvider;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -34,5 +39,15 @@ class ShriekerTest {
         assertFalse(CalibratedSculkShriekerBlockEntity.shouldSend(false, false, 200, 100));
         assertFalse(CalibratedSculkShriekerBlockEntity.shouldSend(false, true, 139, 140));
         assertTrue(CalibratedSculkShriekerBlockEntity.shouldSend(false, true, 140, 140));
+    }
+
+    @Test
+    @ExtendWith(EphemeralTestServerProvider.class)
+    void listeningYieldsToAnItemThatCanBeUsed(MinecraftServer server) {
+        assertFalse(ShriekerEvents.canUse(ItemStack.EMPTY));
+        assertFalse(ShriekerEvents.canUse(new ItemStack(Items.STICK)));
+        assertTrue(ShriekerEvents.canUse(new ItemStack(Items.STONE)));
+        assertTrue(ShriekerEvents.canUse(new ItemStack(Items.WATER_BUCKET)));
+        assertTrue(ShriekerEvents.canUse(new ItemStack(Items.BREAD)));
     }
 }
