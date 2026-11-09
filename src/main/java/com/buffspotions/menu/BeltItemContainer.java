@@ -4,8 +4,10 @@ import com.buffspotions.belt.BeltContents;
 import com.buffspotions.belt.BeltEnchantments;
 import com.buffspotions.equipment.BeltSlotAccess;
 import com.buffspotions.item.PotionBeltItem;
+import com.buffspotions.registry.ModAttachments;
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.world.Container;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -22,39 +24,90 @@ public final class BeltItemContainer implements Container {
     private final Container external;
     private final int externalSlot;
     private final ItemStack mirror;
+    /** Captured when the menu opens so a stale client belt cannot drop the bottle row. */
+    private final int bottleSlots;
 
     public BeltItemContainer(Player player, int source) {
-        this(player, source, null, 0, ItemStack.EMPTY);
+        this(player, source, null, 0, ItemStack.EMPTY, slots(player, source, null, 0, ItemStack.EMPTY));
     }
 
     /** Client view of a belt opened from a chest or other container. */
     public BeltItemContainer(Player player, ItemStack mirror) {
-        this(player, EXTERNAL, null, 0, mirror.copy());
+        this(player, EXTERNAL, null, 0, mirror.copy(), BeltContents.bottleSlotCount(mirror));
     }
 
     public BeltItemContainer(Player player, Container external, int externalSlot) {
-        this(player, EXTERNAL, external, externalSlot, ItemStack.EMPTY);
+        this(player, EXTERNAL, external, externalSlot, ItemStack.EMPTY, slots(player, EXTERNAL, external, externalSlot, ItemStack.EMPTY));
     }
 
     public static void writeOpenData(RegistryFriendlyByteBuf buffer, ItemStack belt) {
-        buffer.writeVarInt(EXTERNAL);
+        writeOpenData(buffer, EXTERNAL, belt);
+    }
+
+    public static void writeOpenData(RegistryFriendlyByteBuf buffer, int source, ItemStack belt) {
+        buffer.writeVarInt(source);
         ItemStack.OPTIONAL_STREAM_CODEC.encode(buffer, belt);
     }
 
     public static BeltItemContainer fromNetwork(Player player, RegistryFriendlyByteBuf data) {
         int source = data.readVarInt();
+        ItemStack snapshot = ItemStack.OPTIONAL_STREAM_CODEC.decode(data);
         if (source == EXTERNAL) {
-            return new BeltItemContainer(player, ItemStack.OPTIONAL_STREAM_CODEC.decode(data));
+            return new BeltItemContainer(player, snapshot);
         }
-        return new BeltItemContainer(player, source);
+        if (player != null) {
+            adopt(player, source, snapshot);
+        }
+        return new BeltItemContainer(player, source, null, 0, ItemStack.EMPTY, BeltContents.bottleSlotCount(snapshot));
     }
 
-    private BeltItemContainer(Player player, int source, Container external, int externalSlot, ItemStack mirror) {
+    /**
+     * The client copy can still be in drink mode after the server belt has switched.
+     * Opening then has to follow the stack the server actually opened.
+     */
+    private static void adopt(Player player, int source, ItemStack snapshot) {
+        if (!(snapshot.getItem() instanceof PotionBeltItem)) {
+            return;
+        }
+        ItemStack live = read(player, source, null, 0, ItemStack.EMPTY);
+        if (live.getItem() == snapshot.getItem()
+                && BeltContents.bottleSlotCount(live) == BeltContents.bottleSlotCount(snapshot)) {
+            return;
+        }
+        ItemStack copy = snapshot.copy();
+        if (source >= INVENTORY) {
+            int index = source - INVENTORY;
+            if (index >= 0 && index < player.getInventory().getContainerSize()) {
+                player.getInventory().setItem(index, copy);
+            }
+            return;
+        }
+        switch (source) {
+            case MAIN_HAND -> player.setItemInHand(InteractionHand.MAIN_HAND, copy);
+            case OFF_HAND -> player.setItemInHand(InteractionHand.OFF_HAND, copy);
+            case EQUIPPED -> {
+                if (BeltSlotAccess.usesCurios()) {
+                    BeltSlotAccess.setEquipped(player, copy);
+                } else {
+                    player.getData(ModAttachments.BELT_SLOT).set(copy);
+                }
+            }
+            default -> {
+            }
+        }
+    }
+
+    private BeltItemContainer(Player player, int source, Container external, int externalSlot, ItemStack mirror, int bottleSlots) {
         this.player = player;
         this.source = source;
         this.external = external;
         this.externalSlot = externalSlot;
         this.mirror = mirror;
+        this.bottleSlots = bottleSlots;
+    }
+
+    public int bottleSlots() {
+        return bottleSlots;
     }
 
     public static int inventorySource(int inventorySlot) {
@@ -62,11 +115,18 @@ public final class BeltItemContainer implements Container {
     }
 
     public ItemStack belt() {
+        return read(player, source, external, externalSlot, mirror);
+    }
+
+    private static ItemStack read(Player player, int source, Container external, int externalSlot, ItemStack mirror) {
         if (external != null) {
             return external.getItem(externalSlot);
         }
         if (source == EXTERNAL) {
             return mirror;
+        }
+        if (player == null) {
+            return ItemStack.EMPTY;
         }
         if (source >= INVENTORY) {
             int index = source - INVENTORY;
@@ -83,9 +143,13 @@ public final class BeltItemContainer implements Container {
         };
     }
 
+    private static int slots(Player player, int source, Container external, int externalSlot, ItemStack mirror) {
+        return BeltContents.bottleSlotCount(read(player, source, external, externalSlot, mirror));
+    }
+
     @Override
     public int getContainerSize() {
-        return BeltContents.BASE_SLOTS + BeltContents.bottleSlotCount(belt());
+        return BeltContents.BASE_SLOTS + bottleSlots;
     }
 
     @Override

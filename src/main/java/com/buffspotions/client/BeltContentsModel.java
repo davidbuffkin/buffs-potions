@@ -61,6 +61,11 @@ public final class BeltContentsModel implements ItemModel {
             int seed
     ) {
         ItemStack dose = BeltContents.get(item, BeltContents.activeSlot(item));
+        // The hotbar atlas redraws an icon only when this identity changes.
+        output.appendModelIdentityElement(BeltContents.activeSlot(item));
+        output.appendModelIdentityElement(dose.getCount());
+        output.appendModelIdentityElement(ItemStack.hashItemAndComponents(dose));
+        output.appendModelIdentityElement(storedBottles(item));
         boolean showDose = !dose.isEmpty() && !(dose.getItem() instanceof PotionBeltItem);
         if (!showDose) {
             this.closed.update(output, item, resolver, displayContext, level, owner, seed);

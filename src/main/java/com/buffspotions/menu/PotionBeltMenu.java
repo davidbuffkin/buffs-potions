@@ -37,7 +37,7 @@ public final class PotionBeltMenu extends AbstractContainerMenu {
     private PotionBeltMenu(int containerId, Inventory inventory, BeltItemContainer belt) {
         super(ModMenus.POTION_BELT.get(), containerId);
         this.belt = belt;
-        this.bottleSlots = BeltContents.bottleSlotCount(belt.belt());
+        this.bottleSlots = belt.bottleSlots();
         belt.startOpen(inventory.player);
         int inventoryY = 51 + (bottleSlots > 0 ? BOTTLE_SHIFT : 0);
         int hotbarY = 109 + (bottleSlots > 0 ? BOTTLE_SHIFT : 0);

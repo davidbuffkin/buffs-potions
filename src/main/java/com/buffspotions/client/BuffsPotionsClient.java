@@ -358,6 +358,7 @@ public final class BuffsPotionsClient {
         }
         SkinMemory.harvest(minecraft);
         BeltDrinkAnim.tick(minecraft.player);
+        BeltKeys.keepSneak(minecraft);
         BeltKeys.sync(minecraft);
         boolean typing = minecraft.gui.screen() != null && minecraft.gui.screen().getFocused() instanceof EditBox;
         if (!typing) {

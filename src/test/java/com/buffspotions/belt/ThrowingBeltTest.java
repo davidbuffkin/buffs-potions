@@ -177,6 +177,25 @@ class ThrowingBeltTest {
         data.release();
     }
 
+    @Test
+    void beltOpenedFromThePlayerKeepsTheServerBottleRow(MinecraftServer server) {
+        ItemStack dragon = ModItems.LINGERING_FLAGON_BELT.get().getDefaultInstance();
+        RegistryFriendlyByteBuf data = new RegistryFriendlyByteBuf(Unpooled.buffer(), server.registryAccess());
+        BeltItemContainer.writeOpenData(data, BeltItemContainer.MAIN_HAND, dragon);
+        BeltItemContainer received = BeltItemContainer.fromNetwork(null, data);
+        assertEquals(BeltContents.BASE_SLOTS + BeltContents.BOTTLE_SLOTS, received.getContainerSize());
+        assertEquals(BeltContents.BOTTLE_SLOTS, received.bottleSlots());
+        data.release();
+
+        ItemStack drinking = dragon.copy();
+        FlagonBeltItem.setMode(drinking, 0);
+        RegistryFriendlyByteBuf drinkData = new RegistryFriendlyByteBuf(Unpooled.buffer(), server.registryAccess());
+        BeltItemContainer.writeOpenData(drinkData, BeltItemContainer.MAIN_HAND, drinking);
+        BeltItemContainer drinkMenu = BeltItemContainer.fromNetwork(null, drinkData);
+        assertEquals(BeltContents.BASE_SLOTS, drinkMenu.getContainerSize());
+        drinkData.release();
+    }
+
     private static ItemStack flagon(ItemStack dose) {
         ItemStack flagon = new ItemStack(ModItems.FLAGON.get());
         flagon.set(ModDataComponents.FLAGON_CONTENTS.get(), new FlagonContents(dose, 1));

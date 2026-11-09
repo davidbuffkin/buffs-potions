@@ -56,7 +56,10 @@ public class PotionBeltItem extends Item {
 
     public static void openMenu(ServerPlayer player, int source) {
         ItemStack belt = new BeltItemContainer(player, source).belt();
-        player.openMenu(menuProvider(source, title(belt)), buffer -> buffer.writeVarInt(source));
+        player.openMenu(
+                menuProvider(source, title(belt)),
+                buffer -> BeltItemContainer.writeOpenData(buffer, source, new BeltItemContainer(player, source).belt())
+        );
     }
 
     public static void openMenu(ServerPlayer player, Container container, int slot) {

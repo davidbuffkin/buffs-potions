@@ -22,6 +22,8 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -300,6 +302,8 @@ public final class BeltConsumptionService {
         player.getCooldowns().addCooldown(belt, cooldownTicks(belt));
         if (advanceSelection) {
             advanceSelection(player, belt);
+        } else {
+            publish(player, belt);
         }
         if (equipped) {
             BeltSlotAccess.setEquipped(player, belt);
@@ -318,7 +322,28 @@ public final class BeltConsumptionService {
         if (next >= 0) {
             BeltContents.setActiveSlot(belt, next);
         }
-        player.inventoryMenu.broadcastChanges();
+        publish(player, belt);
+    }
+
+    /**
+     * A belt taken from a chest can share its last sent snapshot with the stack in hand.
+     * Changing a dose then looks unchanged, so the hotbar keeps the old picture until a full resync.
+     */
+    public static void publish(ServerPlayer player, ItemStack belt) {
+        publishMenu(player.containerMenu, belt);
+        if (player.inventoryMenu != player.containerMenu) {
+            publishMenu(player.inventoryMenu, belt);
+        }
+    }
+
+    private static void publishMenu(AbstractContainerMenu menu, ItemStack belt) {
+        for (int index = 0; index < menu.slots.size(); index++) {
+            Slot slot = menu.getSlot(index);
+            if (slot.getItem() == belt) {
+                menu.setRemoteSlot(index, ItemStack.EMPTY);
+            }
+        }
+        menu.broadcastChanges();
     }
 
     public static ItemStack beltAwaitingAdvance(ServerPlayer player, int advanceId) {

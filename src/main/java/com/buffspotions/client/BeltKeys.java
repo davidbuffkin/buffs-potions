@@ -40,6 +40,28 @@ public final class BeltKeys {
         return USE_BELT.getKey().equals(minecraft.options.keyShift.getKey());
     }
 
+    /**
+     * Pressing the shared key must crouch. NeoForge looks up a modifier key as a
+     * modifier first, and that pass can leave sneak up for the press.
+     */
+    public static void keepSneak(Minecraft minecraft) {
+        if (minecraft.player == null || minecraft.gui.screen() != null || !boundToSneak(minecraft)) {
+            return;
+        }
+        KeyMapping sneak = minecraft.options.keyShift;
+        InputConstants.Key key = sneak.getKey();
+        if (key.getType() != InputConstants.Type.KEYSYM || sneak.isUnbound()) {
+            return;
+        }
+        boolean down = InputConstants.isKeyDown(minecraft.getWindow(), key.getValue());
+        if (!minecraft.options.toggleCrouch().get() && sneak.isDown() != down) {
+            sneak.setDown(down);
+        }
+        if (USE_BELT.isDown() != down) {
+            USE_BELT.setDown(down);
+        }
+    }
+
     /** Sends the held state when it changes, before other belt packets from this frame. */
     public static void sync(Minecraft minecraft) {
         if (minecraft.player == null || minecraft.getConnection() == null) {

@@ -97,6 +97,7 @@ public record BeltActionPayload(Action action, int value) implements CustomPacke
 
         BeltContents.setActiveSlot(belt, slot);
         BeltSource.saveShown(player, belt);
+        BeltConsumptionService.publish(player, belt);
 
         var state = player.getData(ModAttachments.BELT_USE);
         state.cancel();
@@ -127,6 +128,7 @@ public record BeltActionPayload(Action action, int value) implements CustomPacke
         );
         BeltContents.setActiveSlot(belt, slot);
         BeltSource.saveShown(player, belt);
+        BeltConsumptionService.publish(player, belt);
         var state = player.getData(ModAttachments.BELT_USE);
         state.clearAdvance();
         player.syncData(ModAttachments.BELT_USE);
@@ -139,6 +141,7 @@ public record BeltActionPayload(Action action, int value) implements CustomPacke
         }
         FlagonBeltItem.setMode(belt, throwing);
         BeltSource.saveShown(player, belt);
+        BeltConsumptionService.publish(player, belt);
         var state = player.getData(ModAttachments.BELT_USE);
         state.cancel();
         state.clearAdvance();
@@ -155,6 +158,7 @@ public record BeltActionPayload(Action action, int value) implements CustomPacke
         int column = Math.floorMod(BeltContents.activeSlot(belt), BeltContents.BASE_SLOTS);
         BeltContents.setActiveSlot(belt, nextRow * BeltContents.BASE_SLOTS + column);
         BeltSource.saveShown(player, belt);
+        BeltConsumptionService.publish(player, belt);
     }
 
     @Override
