@@ -225,7 +225,7 @@ public final class BeltContents {
         if (belt.getItem() instanceof FlagonBeltItem) {
             return stack.getItem() instanceof FlagonItem;
         }
-        return isDrinkableDose(stack);
+        return isDrinkableDose(stack) || isThrowableDose(stack);
     }
 
     public static boolean isResidue(ItemStack stack) {

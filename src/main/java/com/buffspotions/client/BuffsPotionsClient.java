@@ -482,7 +482,7 @@ public final class BuffsPotionsClient {
             return;
         }
         ItemStack belt = BeltSource.shown(minecraft.player);
-        boolean throwing = repeatsThrow(minecraft.player, belt);
+        boolean throwing = repeatsThrow(minecraft.player, belt) || throwsStoredPotion(belt);
         boolean yields = BeltClickPriority.allows(minecraft.player, minecraft.hitResult, main, offhand);
         boolean drinkFirst = !BeltKeys.boundToSneak(minecraft) && !throwing;
         if (throwing && !yields) {
@@ -603,6 +603,11 @@ public final class BuffsPotionsClient {
     /** Flagon, creeper, and dragon belts in drink mode take one dose per right-click. */
     private static boolean drinksOnce(ItemStack belt) {
         return belt.getItem() instanceof FlagonBeltItem flagon && !flagon.throwsPotions(belt);
+    }
+
+    /** A normal potion belt throws the splash or lingering potion in its active slot. */
+    private static boolean throwsStoredPotion(ItemStack belt) {
+        return BeltContents.isThrowableDose(BeltContents.get(belt, BeltContents.activeSlot(belt)));
     }
 
     /** Creeper and dragon belts in splash or linger mode throw again each time the held click clears the cooldown. */

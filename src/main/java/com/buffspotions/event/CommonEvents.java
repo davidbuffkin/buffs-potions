@@ -288,7 +288,8 @@ public final class CommonEvents {
             return;
         }
         ItemStack belt = BeltSource.shown(player);
-        if (!PotionBeltItem.canDrink(player, belt)) {
+        ItemStack dose = BeltContents.get(belt, BeltContents.activeSlot(belt));
+        if (!BeltContents.isThrowableDose(dose) && !PotionBeltItem.canDrink(player, belt)) {
             return;
         }
         double reach = Math.max(player.blockInteractionRange(), player.entityInteractionRange());

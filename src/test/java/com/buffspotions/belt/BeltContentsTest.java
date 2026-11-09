@@ -82,6 +82,21 @@ class BeltContentsTest {
     }
 
     @Test
+    void scrollingLandsOnSplashAndLingeringPotions(MinecraftServer server) {
+        ItemStack belt = ModItems.POTION_BELT.get().getDefaultInstance();
+        BeltContents.set(belt, 0, new ItemStack(Items.POTION));
+        BeltContents.set(belt, 2, new ItemStack(Items.SPLASH_POTION));
+        BeltContents.set(belt, 5, new ItemStack(Items.LINGERING_POTION));
+        BeltContents.setActiveSlot(belt, 0);
+
+        assertTrue(BeltContents.isConsumableCell(belt, BeltContents.get(belt, 2)));
+        assertTrue(BeltContents.isConsumableCell(belt, BeltContents.get(belt, 5)));
+        assertEquals(2, BeltContents.scrollInRow(belt, 1, 0, BeltContents.BASE_SLOTS));
+        BeltContents.setActiveSlot(belt, 2);
+        assertEquals(5, BeltContents.scrollInRow(belt, 1, 0, BeltContents.BASE_SLOTS));
+    }
+
+    @Test
     void selectionCanAddressAllReservedCellsWithoutExposingThem(MinecraftServer server) {
         ItemStack belt = ModItems.POTION_BELT.get().getDefaultInstance();
 
