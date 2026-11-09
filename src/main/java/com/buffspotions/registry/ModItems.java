@@ -111,7 +111,7 @@ public final class ModItems {
                     properties,
                     "creeper_upgrade",
                     ChatFormatting.GREEN,
-                    Identifier.fromNamespaceAndPath(BuffsPotions.MOD_ID, "container/slot/flagon_belt"),
+                    Identifier.fromNamespaceAndPath(BuffsPotions.MOD_ID, "container/slot/belt"),
                     Identifier.fromNamespaceAndPath(BuffsPotions.MOD_ID, "container/slot/creeper_head")
             ),
             properties -> properties.stacksTo(64)
@@ -123,7 +123,7 @@ public final class ModItems {
                     properties,
                     "dragon_upgrade",
                     ChatFormatting.LIGHT_PURPLE,
-                    Identifier.fromNamespaceAndPath(BuffsPotions.MOD_ID, "container/slot/splash_flagon_belt"),
+                    Identifier.fromNamespaceAndPath(BuffsPotions.MOD_ID, "container/slot/belt"),
                     Identifier.fromNamespaceAndPath(BuffsPotions.MOD_ID, "container/slot/dragon_head")
             ),
             properties -> properties.stacksTo(64)
